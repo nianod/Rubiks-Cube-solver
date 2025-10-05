@@ -1,0 +1,7 @@
+1: Understanding the Problem
+Rubik’s Cube Representation in C++(colors...)
+Implementing Moves
+Choosing a Solving Algorithm
+Planning Input/Output
+Expand to heuristic-based solver like A*.
+
