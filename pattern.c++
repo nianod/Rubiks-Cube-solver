@@ -11,6 +11,23 @@ struct CubeState {
     
 
     //array of colors
+    enum color = {
+            WHITE, YELLOW, RED, ORANGE, BLUE, GREEN, NONE
+    }
+
+    struct CubeState {
+    // 6 faces, 
+    //  cube is solved by default
+    std::array<Color, 54> stickers;
+
+    CubeState() {
+        
+        for (int face = 0; face < 6; face++) {
+            for (int i = 0; i < 9; i++) {
+                stickers[face * 9 + i] = static_cast<Color>(face); 
+            }
+        }
+    }
     
     bool isGoal() const {
         // Return true if this state is solved
@@ -21,7 +38,7 @@ struct CubeState {
     }
     
     int heuristic() const {
-        // Estimate distance to goal
+        //   distance to goal
     }
 
     bool operator==(const CubeState &other) const {
@@ -39,7 +56,7 @@ struct CubeHasher {
 struct Node {
     CubeState state;
     int g;  // cost from start to this node
-    int f;  // 
+    int f;  
     std::vector<std::string> path; // moves taken to reach here
 };
 
