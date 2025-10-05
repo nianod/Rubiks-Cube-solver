@@ -1,0 +1,43 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+
+# Intermediate and build files
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+
+# Source control files
+*.vspscc
+*.vssscc
+*.svclog
+*.scc
+
+# Build configurations
+*.builds
+
+# Visual Studio database files
+*.pidb
+
+# Others
+*.bak
+*~ 
+
+# Ignore Visual Studio folders
+.vs/

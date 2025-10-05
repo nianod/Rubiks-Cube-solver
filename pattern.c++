@@ -29,8 +29,14 @@ struct CubeState {
         }
     }
     
-    bool isGoal() const {
-        // Return true if this state is solved
+   bool isGoal() const {
+         for (int face = 0; face < 6; face++) {
+            Color c = stickers[face * 9];
+            for (int i = 1; i < 9; i++) {
+                if (stickers[face * 9 + i] != c) return false;
+            }
+        }
+        return true;
     }
     
     std::vector<CubeState> getNeighbors() const {
